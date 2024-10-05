@@ -1,43 +1,94 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Tambah Buku</title>
-    </head>
-    <body>
-        <form action="" method="post">
-            <label for="judulBuku">Judul Buku</label> <br> 
-            <input type="text" id="judulBuku" name="judulBuku" placeholder="Judul Buku" required><br> 
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <link rel="stylesheet" href="style3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text">Tambah Buku</h2>
+      <form action="" method="post">
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" id="judulBuku" name="judulBuku" required />
+            <div class="underline"></div>
+            <label for="judulBuku">Judul Buku</label>
+          </div>
+        </div>
 
-            <label for="isbn">ISBN</label> <br> 
-            <input type="number" id="isbn" name="isbn" placeholder="ISBN" required><br> 
+        <div class="form-row">
+          <div class="input-data">
+            <input type="number" id="isbn" name="isbn" required />
+            <div class="underline"></div>
+            <label for="isbn">ISBN</label>
+          </div>
 
-            <label for="kategori">Kategori</label> <br> 
-            <select id="kategori" name="kategori" required>
-                <option value="">Pilih Kategori</option>
-                <option value="Fiksi">Fiksi</option>
-                <option value="Non Fiksi">Non Fiksi</option>
-                <option value="Quotes">Quotes</option>
-                <option value="Inspirational">Inspirational</option>
-                <option value="Novel">Novel</option>
-                <option value="Komik">Komik</option>
-            </select><br> 
+          <div class="input-data">
+            <select id="kategori" name="kategori" required class="minimal">
+              <option value="">Pilih Kategori</option>
+              <option value="Fiksi">Fiksi</option>
+              <option value="Non Fiksi">Non Fiksi</option>
+              <option value="Quotes">Quotes</option>
+              <option value="Inspirational">Inspirational</option>
+              <option value="Novel">Novel</option>
+              <option value="Komik">Komik</option>
+            </select>
+            <div class="underline"></div>
+          </div>
+        </div>
 
-            <label for="pengarang">Pengarang</label> <br> 
-            <input type="text" id="pengarang" name="pengarang" placeholder="Pengarang" required><br> 
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" id="pengarang" name="pengarang" required />
+            <div class="underline"></div>
+            <label for="pengarang">Pengarang</label>
+          </div>
+        </div>
 
-            <label for="penerbit">Penerbit</label> <br> 
-            <input type="text" id="penerbit" name="penerbit" placeholder="Penerbit" required><br> 
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" id="penerbit" name="penerbit" required />
+            <div class="underline"></div>
+            <label for="penerbit">Penerbit</label>
+          </div>
+        </div>
 
-            <label for="tahunTerbit">Tahun Terbit</label> <br> 
-            <input type="date" id="tahunTerbit" name="tahunTerbit" required><br> 
+        <div class="form-row">
+          <div class="input-data">
+            <input
+              type="text"
+              id="tahunTerbit"
+              name="tahunTerbit"
+              required
+              type="text"
+              onfocus="(this.type='date')"
+              onblur="if(!this.value)this.type='text'"
+            />
+            <div class="underline"></div>
+            <label for="tahunTerbit">Tahun Terbit</label>
+          </div>
 
-            <label for="jumlahBuku">Jumlah Buku Tersedia</label> <br> 
-            <input type="number" id="jumlahBuku" name="jumlahBuku" placeholder="Jumlah Buku Tersedia" required><br>
-            
-            <input type="submit" name="simpan" value="Simpan">
-            <input type="button" name="batal" value="Batal">
+          <div class="input-data">
+            <input type="number" id="jumlahBuku" name="jumlahBuku" required />
+            <div class="underline"></div>
+            <label for="jumlahBuku">Jumlah Buku Tersedia</label>
+          </div>
+        </div>
 
-        </form>
+        <div class="form-row submit-btn">
+            <div class="input-data">
+              <div class="inner"></div>
+              <input type="submit" name="simpan" value="Simpan"/>
+            </div>
 
-    </body>
+            <div class="input-data">
+              <div class="inner"></div>
+              <input type="button" name="batal" value="Batal"/>
+            </div>
+        </div>
+
+      </form>
+    </div>
+  </body>
 </html>
