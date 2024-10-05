@@ -167,12 +167,12 @@ select:valid ~ .underline:before {
 .submit-btn .input-data {
   overflow: hidden;
   height: 45px !important;
-  width: 25% !important;
+  width: 100% !important;
 }
 .cancel-btn .input-data {
   overflow: hidden;
   height: 45px !important;
-  width: 25% !important;
+  width: 100% !important;
 }
 .submit-btn .input-data .inner {
   height: 100%;
@@ -196,10 +196,11 @@ select:valid ~ .underline:before {
   left: -100%;
   background: -webkit-linear-gradient(
     right,
-    #ff0000,
     #ead701,
     #ff0000,
-    #ead701
+    #ead701,
+    #ff0000
+
   );
 
   transition: all 0.4s;
@@ -250,10 +251,9 @@ select:valid ~ .underline:before {
     margin: 35px 0 !important;
   }
   .submit-btn .input-data,
-  .cancel-btn {
-    width: 40% !important;
+  .cancel-btn .input-data{
+    width: 100% !important;
   }
-
   select {
     padding: 10px 0 0 0;
   }
