@@ -1,4 +1,5 @@
 -- a. Initial Data
+--Point 1
 INSERT INTO Kategori 
 VALUES 
 (1,'Fiksi'),
@@ -7,6 +8,7 @@ VALUES
 (4,'Novel'),
 (5,'Komik');
 
+--Point 2
 INSERT INTO user
 VALUES
 (1,'User 1','Binong','3576014403910001','08577050001','user1@email.com','2024-08-05'),
@@ -15,6 +17,7 @@ VALUES
 (4,'User 4','Ciledug','3576014403910004','08577050004','user4@email.com','2024-08-05'),
 (5,'User 5','Curug','3576014403910005','08577050005','user5@email.com','2024-08-05');
 
+--Point 3
 INSERT INTO buku 
 VALUES
 (1,'Laskar Pelangi','Andrea Hirata','Bentang Pustaka','9789791227531',2005,15,1),
@@ -28,6 +31,7 @@ VALUES
 (9,'The Great Gatsby','F. Scott Fitzgerald','Charles Scribners Sons','9780743273565',1925,10,3),
 (10,'The Catcher in the Rye','J.D. Salinger','Little, Brown and Company','9780316769488',1951,9,5);
 
+--Point 4 & 5
 INSERT INTO peminjaman
 VALUES (1,1,1,'2024-08-05',DATE_ADD(tanggal_pinjam, INTERVAL 13 DAY),'2024-08-10',
     CASE 
@@ -94,15 +98,18 @@ VALUES (1,1,1,'2024-08-05',DATE_ADD(tanggal_pinjam, INTERVAL 13 DAY),'2024-08-10
 );
 
 -- b. Manipulasi Data
+-- No. 1
 SELECT id, judul 
 FROM buku WHERE NOT EXISTS (
     SELECT 1 FROM peminjaman WHERE peminjaman.buku_id = buku.id
 );
 
+-- No.2
 SELECT user.nama, peminjaman.denda 
 FROM peminjaman
 JOIN user ON user.id = peminjaman.anggota_id WHERE peminjaman.denda>0;
 
+-- No.3
 SELECT ROW_NUMBER() OVER (ORDER BY user.nama) AS No, user.nama, GROUP_CONCAT(buku.judul ORDER BY buku.judul DESC SEPARATOR ',') AS buku
 FROM peminjaman
 JOIN user ON user.id = peminjaman.anggota_id
