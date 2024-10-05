@@ -22,7 +22,7 @@ VALUES
 (3,'Perahu Kertas','Dee Lestari','Bentang Pustaka','9786028811119',2009,8,4),
 (4,'The Alchemist','Paulo Coelho','HarperCollins','9780061122415',1988,12,5),
 (5,'Harry Potter and the Sorcerers Stone','J.K. Rowling','Bloomsbury','9780747532699',1997,20,4),
-(6,'1984', 'George Orwell','Secker & Warburg','9780451524935',1949,5,3),
+(6,'1984','George Orwell','Secker & Warburg','9780451524935',1949,5,3),
 (7,'Pride and Prejudice','Jane Austen','T. Egerton','9780141199078',1813,7,2),
 (8,'To Kill a Mockingbird','Harper Lee','J.B. Lippincott & Co.','9780060935461',1960,6,2),
 (9,'The Great Gatsby','F. Scott Fitzgerald','Charles Scribners Sons','9780743273565',1925,10,3),
@@ -93,5 +93,18 @@ VALUES (1,1,1,'2024-08-05',DATE_ADD(tanggal_pinjam, INTERVAL 13 DAY),'2024-08-10
     END
 );
 
+-- b. Manipulasi Data
+SELECT id, judul 
+FROM buku WHERE NOT EXISTS (
+    SELECT 1 FROM peminjaman WHERE peminjaman.buku_id = buku.id
+);
 
+SELECT user.nama, peminjaman.denda 
+FROM peminjaman
+JOIN user ON user.id = peminjaman.anggota_id WHERE peminjaman.denda>0;
 
+SELECT ROW_NUMBER() OVER (ORDER BY user.nama) AS No, user.nama, GROUP_CONCAT(buku.judul ORDER BY buku.judul DESC SEPARATOR ',') AS buku
+FROM peminjaman
+JOIN user ON user.id = peminjaman.anggota_id
+JOIN buku ON buku.id = peminjaman.buku_id
+GROUP BY user.nama;
