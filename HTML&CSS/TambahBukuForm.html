@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tambah Buku</title>
+    </head>
+    <body>
+        <form action="" method="post">
+            <label for="judulBuku">Judul Buku</label> <br> 
+            <input type="text" id="judulBuku" name="judulBuku" placeholder="Judul Buku" required><br> 
+
+            <label for="isbn">ISBN</label> <br> 
+            <input type="number" id="isbn" name="isbn" placeholder="ISBN" required><br> 
+
+            <label for="kategori">Kategori</label> <br> 
+            <select id="kategori" name="kategori" required>
+                <option value="">Pilih Kategori</option>
+                <option value="Fiksi">Fiksi</option>
+                <option value="Non Fiksi">Non Fiksi</option>
+                <option value="Quotes">Quotes</option>
+                <option value="Inspirational">Inspirational</option>
+                <option value="Novel">Novel</option>
+                <option value="Komik">Komik</option>
+            </select><br> 
+
+            <label for="pengarang">Pengarang</label> <br> 
+            <input type="text" id="pengarang" name="pengarang" placeholder="Pengarang" required><br> 
+
+            <label for="penerbit">Penerbit</label> <br> 
+            <input type="text" id="penerbit" name="penerbit" placeholder="Penerbit" required><br> 
+
+            <label for="tahunTerbit">Tahun Terbit</label> <br> 
+            <input type="date" id="tahunTerbit" name="tahunTerbit" required><br> 
+
+            <label for="jumlahBuku">Jumlah Buku Tersedia</label> <br> 
+            <input type="number" id="jumlahBuku" name="jumlahBuku" placeholder="Jumlah Buku Tersedia" required><br>
+            
+            <input type="submit" name="simpan" value="Simpan">
+            <input type="button" name="batal" value="Batal">
+
+        </form>
+
+    </body>
+</html>
