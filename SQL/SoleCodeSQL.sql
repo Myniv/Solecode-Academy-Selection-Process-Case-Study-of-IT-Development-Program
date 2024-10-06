@@ -20,17 +20,16 @@ VALUES
 --Point 3
 INSERT INTO buku 
 VALUES
-(1,'Laskar Pelangi','Andrea Hirata','Bentang Pustaka','9789791227531',2005,15,1),
-(2,'Bumi Manusia','Pramoedya Ananta Toer','Lentera Dipantara','9789799731245',1980,10,1),
-(3,'Perahu Kertas','Dee Lestari','Bentang Pustaka','9786028811119',2009,8,4),
-(4,'The Alchemist','Paulo Coelho','HarperCollins','9780061122415',1988,12,5),
-(5,'Harry Potter and the Sorcerers Stone','J.K. Rowling','Bloomsbury','9780747532699',1997,20,4),
-(6,'1984','George Orwell','Secker & Warburg','9780451524935',1949,5,3),
-(7,'Pride and Prejudice','Jane Austen','T. Egerton','9780141199078',1813,7,2),
-(8,'To Kill a Mockingbird','Harper Lee','J.B. Lippincott & Co.','9780060935461',1960,6,2),
-(9,'The Great Gatsby','F. Scott Fitzgerald','Charles Scribners Sons','9780743273565',1925,10,3),
-(10,'The Catcher in the Rye','J.D. Salinger','Little, Brown and Company','9780316769488',1951,9,5);
-
+(1,'Buku 1','Orang 1','Penerbit 1','9789791227531',2005,15,1),
+(2,'Buku 2','Orang 2','Penerbit 2','9789799731245',1980,10,1),
+(3,'Buku 3','Orang 3','Penerbit 3','9786028811119',2009,8,4),
+(4,'Buku 4','Orang 4','Penerbit 4','9780061122415',1988,12,5),
+(5,'Buku 5','Orang 5','Penerbit 5','9780747532699',1997,20,4),
+(6,'Buku 6','Orang 6','Penerbit 6','9780451524935',1949,5,3),
+(7,'Buku 7','Orang 7','Penerbit 7','9780141199078',1813,7,2),
+(8,'Buku 8','Orang 8','Penerbit 8','9780060935461',1960,6,2),
+(9,'Buku 9','Orang 9','Penerbit 9','9780743273565',1925,10,3),
+(10,'Buku 10','Orang 10','Penerbit 10','9780316769488',1951,9,5);
 --Point 4 & 5
 INSERT INTO peminjaman
 VALUES (1,1,1,'2024-08-05',DATE_ADD(tanggal_pinjam, INTERVAL 13 DAY),'2024-08-10',
