@@ -15,10 +15,11 @@ namespace Algorithm
             int batasMaxPinjaman = 14;
             int dendaHarian = 1000;
 
-            Console.WriteLine("=========================================");
             int[] dendaPerBuku = dendaKeterlambatan(daftarBuku, tanggalPinjam, tanggalPengembalian, batasMaxPinjaman, dendaHarian);
             int totalDenda = 0;
 
+            Console.WriteLine("=========================================");
+            //Menampilkan Denda
             Console.WriteLine("Denda Per-Buku :");
             for (int i = 0; i < dendaPerBuku.Length; i++)
             {
@@ -70,6 +71,8 @@ namespace Algorithm
                 int j = i + 1;
                 Console.WriteLine(j + ". " + arrayBuku[i]);
             }
+
+            //Algoritma agar input jumlah buku tidak lebih dari panjang array
             Console.WriteLine("Sebutkan jumlah buku yang dipinjam");
             int jumlahPinjamanBuku = int.Parse(Console.ReadLine());
             bool bukuNotExceed = false;
@@ -78,6 +81,7 @@ namespace Algorithm
                 if (jumlahPinjamanBuku < 1 || jumlahPinjamanBuku > arrayBuku.Length)
                 {
                     Console.WriteLine("Jumlah Buku yang dipinjam hanya 1 - " + arrayBuku.Length);
+                    Console.Write("Sebutkan kembali jumalh buku yang dipinjam : ");
                     jumlahPinjamanBuku = int.Parse(Console.ReadLine());
                 }
                 else
@@ -87,6 +91,7 @@ namespace Algorithm
 
             }
 
+            //Algoritma agar jika buku yang telah dipinjam, tidak bisa dipinjam kembali
             Console.WriteLine("Sebutkan nomor buku yang dipinjam : ");
             int temp = -1;
             for (int i = 0; i < jumlahPinjamanBuku; i++)
@@ -96,7 +101,7 @@ namespace Algorithm
                 int nomorBuku = int.Parse(Console.ReadLine());
                 if (daftarBuku.Contains(arrayBuku[nomorBuku - 1]))
                 {
-                    Console.WriteLine("Buku nomor " + i + " telah dipinjam. Silahkan pilih buku yang lain!");
+                    Console.WriteLine("Buku nomor " + nomorBuku + " telah dipinjam. Silahkan pilih buku yang lain!");
                     temp = i;
                     i = temp - 1;
                     continue;
@@ -119,6 +124,7 @@ namespace Algorithm
             Console.Write("Masukkan Bulan Peminjaman dengan angka :");
             int bulanPinjam = int.Parse(Console.ReadLine());
 
+            //Algoritma agar input bulan hanya 1-12
             bool bulanPinjamTidakMelebihi = false;
             while (bulanPinjamTidakMelebihi == false)
             {
@@ -133,6 +139,7 @@ namespace Algorithm
                     bulanPinjamTidakMelebihi = true;
                 }
             }
+            //Algoritma input hari sesuai dengan jumlah hari pada tahun dan bulannya
             Console.Write("Masukkan Tanggal Hari Peminjaman dengan angka:");
             int hariPinjam = int.Parse(Console.ReadLine());
             int totalHariDiBulanPeminjaman = DateTime.DaysInMonth(tahunPinjam, bulanPinjam);
@@ -157,11 +164,12 @@ namespace Algorithm
 
         public static List<DateOnly> getTanggalPengembalian(DateOnly tanggalPinjam, List<string> daftarBuku)
         {
-            //Mendapatkan Tanggal Pengembalian
+            //Mendapatkan List Tanggal Pengembalian masing masing buku
             List<DateOnly> tanggalPengembalianPerBuku = new List<DateOnly>();
             for (int i = 0; i < daftarBuku.Count; i++)
             {
                 int j = i + 1;
+                //Algoritma agar user tidak bisa menginput tahun pengembalian lebih rendah dari tahun peminjaman
                 Console.WriteLine("---Tanggal Pengembalian Buku " + j + "---");
                 Console.Write("Masukkan Tahun Pengembalian :");
                 int tahunPengembalian = int.Parse(Console.ReadLine());
@@ -179,6 +187,9 @@ namespace Algorithm
                         tahunPengembalianTidakMelebihi = true;
                     }
                 }
+
+                //Algoritma agar user tidak bisa menginput bulan pengembalian lebih rendah dari tahun dan bulan peminjaman
+                //Terdapat juga agar user hanya bisa menginput bulan 1-12
                 Console.Write("Masukkan Bulan Pengembalian :");
                 int bulanPengembalian = int.Parse(Console.ReadLine());
                 bool bulanPengembalianTidakMelebihi = false;
@@ -211,6 +222,9 @@ namespace Algorithm
                         }
                     }
                 }
+
+                //Algoritma agar user tidak memasukkan hari pengembalian yang lebih rendah jika pengembalian di bulan dan tahun yg sama dengan peminjaman
+                //Terdapat juga agar user hanya bisa menginput maksimal hari sesuai dengan bulan dan tahunnya
                 Console.Write("Masukkan Tanggal Hari Pengembalian :");
                 int hariPengembalian = int.Parse(Console.ReadLine());
                 bool hariPengembalianTidakMelebihi = false;
