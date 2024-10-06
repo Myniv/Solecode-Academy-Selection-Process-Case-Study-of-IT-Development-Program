@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8753bdde0b7ea19a51d07f84822eb38e93cfb56d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f245bc727ec38c29ee959dbd26be872382f4e703")]
 [assembly: System.Reflection.AssemblyProductAttribute("Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

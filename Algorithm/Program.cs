@@ -16,11 +16,11 @@ namespace Algorithm
             int dendaHarian = 1000;
 
             Console.WriteLine("=========================================");
-            List<int> dendaPerBuku = dendaKeterlambatan(daftarBuku, tanggalPinjam, tanggalPengembalian, batasMaxPinjaman, dendaHarian);
+            int[] dendaPerBuku = dendaKeterlambatan(daftarBuku, tanggalPinjam, tanggalPengembalian, batasMaxPinjaman, dendaHarian);
             int totalDenda = 0;
 
             Console.WriteLine("Denda Per-Buku :");
-            for (int i = 0; i < dendaPerBuku.Count; i++)
+            for (int i = 0; i < dendaPerBuku.Length; i++)
             {
                 int j = i + 1;
                 Console.WriteLine(j + ". Buku " + daftarBuku[i] + " mempunyai denda : " + dendaPerBuku[i]);
@@ -30,12 +30,12 @@ namespace Algorithm
 
         }
 
-        public static List<int> dendaKeterlambatan(List<string> daftarBuku, DateOnly tanggalPinjam, List<DateOnly> tanggalPengembalian, int batasMaxPinjaman, int dendaHarian)
+        public static int[] dendaKeterlambatan(List<string> daftarBuku, DateOnly tanggalPinjam, List<DateOnly> tanggalPengembalian, int batasMaxPinjaman, int dendaHarian)
         {
             int totalBuku = daftarBuku.Count;
             int dendaBuku = 0;
             List<int> totalHariPeminjamanPerBuku = new List<int>();
-            List<int> dendaPerBuku = new List<int>();
+            int[] dendaPerBuku = new int[0];
 
             for (int i = 0; i < totalBuku; i++)
             {
@@ -48,12 +48,12 @@ namespace Algorithm
                 if (totalHariPeminjamanPerBuku[i] > 14)
                 {
                     dendaBuku = (totalHariPeminjamanPerBuku[i] - 14) * dendaHarian;
-                    dendaPerBuku.Add(dendaBuku);
+                    dendaPerBuku = dendaPerBuku.Append(dendaBuku).ToArray();
                 }
                 else if (totalHariPeminjamanPerBuku[i] < 14)
                 {
                     dendaBuku = 0;
-                    dendaPerBuku.Add(dendaBuku);
+                    dendaPerBuku = dendaPerBuku.Append(dendaBuku).ToArray();
                 }
             }
 
