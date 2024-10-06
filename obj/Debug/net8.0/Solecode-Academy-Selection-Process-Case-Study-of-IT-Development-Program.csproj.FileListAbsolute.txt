@@ -1,5 +1,0 @@
-D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\obj\Debug\net8.0\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program.GeneratedMSBuildEditorConfig.editorconfig
-D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\obj\Debug\net8.0\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program.AssemblyInfoInputs.cache
-D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\obj\Debug\net8.0\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program.AssemblyInfo.cs
-D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\obj\Debug\net8.0\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program.csproj.CoreCompileInputs.cache
-D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\obj\Debug\net8.0\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program.sourcelink.json
