@@ -1,0 +1,15 @@
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\bin\Debug\net8.0\Algorithm.exe
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\bin\Debug\net8.0\Algorithm.deps.json
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\bin\Debug\net8.0\Algorithm.runtimeconfig.json
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\bin\Debug\net8.0\Algorithm.dll
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\bin\Debug\net8.0\Algorithm.pdb
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\obj\Debug\net8.0\Algorithm.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\obj\Debug\net8.0\Algorithm.AssemblyInfoInputs.cache
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\obj\Debug\net8.0\Algorithm.AssemblyInfo.cs
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\obj\Debug\net8.0\Algorithm.csproj.CoreCompileInputs.cache
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\obj\Debug\net8.0\Algorithm.sourcelink.json
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\obj\Debug\net8.0\Algorithm.dll
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\obj\Debug\net8.0\refint\Algorithm.dll
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\obj\Debug\net8.0\Algorithm.pdb
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\obj\Debug\net8.0\Algorithm.genruntimeconfig.cache
+D:\Mulyana\Solecode-Academy-Selection-Process-Case-Study-of-IT-Development-Program\Algorithm\obj\Debug\net8.0\ref\Algorithm.dll
